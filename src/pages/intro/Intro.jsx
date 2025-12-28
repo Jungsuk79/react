@@ -8,7 +8,7 @@ const Intro = () => {
 
     return (
         <div>
-           인트로페이지 {name}님 환영합니다.11111
+           인트로페이지 {name}님 환영합니다.
         </div>
     );
 };
