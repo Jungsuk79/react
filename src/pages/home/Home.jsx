@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div>
             <S.Title>
-                홈페이지
+                홈페이지11
             </S.Title>
             <Link to={`/intro?name=${name}`}>인트로 페이지</Link>
             <div>
