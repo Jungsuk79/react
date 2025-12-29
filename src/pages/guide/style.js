@@ -25,27 +25,9 @@ S.GuideSubTitle = styled.h4`
 
 S.GuideFlexBox = styled.div`
     ${flexRow}
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     gap:10px;
     margin-top:10px;
-    & > dl {
-        width:calc(100%/4 - 8px);
-        padding:10px;
-        border:1px solid #ddd;
-        @media ${media.tablet} {
-            width:calc(100%/3 - 7px);
-        }
-        @media ${media.mobile} {
-            width:calc(100%/2 - 8px);
-        }
-        & dt {
-            font-size:${theme.FONT_SIZE.h7};
-        }
-        & dd {
-            margin-top:5px;
-            font-size:${theme.FONT_SIZE.h4};
-        }
-    }
 `
 S.GuideBox = styled.div`
     margin-top:10px;
@@ -57,9 +39,42 @@ S.GuideBox = styled.div`
     }
 `
 
+S.GuideBoxTitle = styled.h4`
+    margin-top:20px;
+    margin-bottom:10px;
+    font-weight: bold;
+`
+
 S.GuideFontBox = styled.div`
     ${flexRow}
+    align-items:center;
+`
+
+S.GuideColorBox = styled.div`
+    ${flexRow}
     align-items: center;
+`
+
+S.GuideColorBarBox = styled.div`
+    ${flexRow}
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+`
+
+S.GuideColorBar = styled.div`
+    min-width:230px;
+    height:200px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow: hidden;
+`
+
+S.ColorBar = styled.div`
+    width:100%;
+    height:80px;
+    border-bottom:1px solid #ddd;
+    background-color:;
 `
 
 S.Left = styled.div`
@@ -114,6 +129,25 @@ S.ColorTextInfo = styled.div`
     }
 `
 
+S.GuideFontLineBox = styled.div`
+    width:calc(100%/4 - 8px);
+    padding:10px;
+    border:1px solid #ddd;
+    @media ${media.tablet} {
+        width:calc(100%/3 - 7px);
+    }
+    @media ${media.mobile} {
+        width:calc(100%/2 - 8px);
+    }
+    & dt {
+        font-size:${theme.FONT_SIZE.h7};
+    }
+    & dd {
+        margin-top:5px;
+        font-size:${theme.FONT_SIZE.h4};
+    }
+`
+
 S.ColorBox = styled.div`
     margin:20px;
     background-color:#ddd;
@@ -122,6 +156,25 @@ S.ColorBox = styled.div`
     align-items: center;
     width:80px;
     height:80px;
+`
+
+S.ColorBox = styled.div`
+    margin:20px;
+    background-color:#ddd;
+    border-radius:10px;
+    display:flex;
+    align-items: center;
+    width:80px;
+    height:80px;
+`
+
+S.ColorBarInfoList = styled.div`
+    padding:15px;
+`
+S.ColorBarInfoTitle = styled.h4`
+    font-size:${theme.FONT_SIZE.h7};
+    font-weight:600;
+    color:${theme.PALETTE.gray["600"]};
 `
 
 export default S;
