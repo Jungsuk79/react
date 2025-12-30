@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import {flexRow, pageSubTitle, pageTitle} from "../../styles/common";
+import {flexRow, h2Bold, pageSubTitle, pageTitle} from "../../styles/common";
 import theme from "../../styles/theme";
-import {media} from "../../styles/breakpoint";
 
 const S = {}
 
@@ -13,11 +12,11 @@ S.GuideWrapper = styled.div`
 `
 
 S.GuideTitle = styled.h3`
-    ${pageTitle}
+    ${h2Bold}
 `
 
 S.GuideSubTitle = styled.h4`
-    ${pageSubTitle}
+    ${pageTitle}
     padding-bottom:5px;
     border-bottom:1px solid ${theme.PALETTE.gray["300"]};
     margin-top:20px;
@@ -27,22 +26,17 @@ S.GuideFlexBox = styled.div`
     ${flexRow}
     flex-wrap:wrap;
     gap:10px;
-    margin-top:10px;
+    margin-top:20px;
 `
 S.GuideBox = styled.div`
     margin-top:10px;
-    & > div {
-        margin-top:20px;
-    }
-    & > div:first-child {
-        margin-top:0px;
-    }
 `
 
 S.GuideBoxTitle = styled.h4`
     margin-top:20px;
     margin-bottom:10px;
     font-weight: bold;
+    ${pageSubTitle}
 `
 
 S.GuideFontBox = styled.div`
@@ -74,7 +68,6 @@ S.ColorBar = styled.div`
     width:100%;
     height:80px;
     border-bottom:1px solid #ddd;
-    background-color:;
 `
 
 S.Left = styled.div`
@@ -96,12 +89,11 @@ S.LeftText = styled.p`
 
 S.ColorTextBox = styled.div`
     width:150px;
-    height:120px;
     padding:15px;
     border:1px solid #ddd;
     border-radius:15px;
     & > p {
-        font-size:${theme.FONT_SIZE.h6};
+        font-size:${theme.FONT_SIZE.h7};
         font-weight:bold;
     }
 `
@@ -119,32 +111,26 @@ S.ColorTextInfo = styled.div`
         & > dt {
             flex-shrink:0;
             width:30px;
-            font-size:12px;
+            font-size:${theme.FONT_SIZE.h8};
             color:${theme.PALETTE.gray["900"]};
         }
         & > dd {
-            font-size:${theme.FONT_SIZE.h7};
+            font-size:${theme.FONT_SIZE.h8};
             color:${theme.PALETTE.black};
         }
     }
 `
 
 S.GuideFontLineBox = styled.div`
-    width:calc(100%/4 - 8px);
+    min-width:235px;
     padding:10px;
     border:1px solid #ddd;
-    @media ${media.tablet} {
-        width:calc(100%/3 - 7px);
-    }
-    @media ${media.mobile} {
-        width:calc(100%/2 - 8px);
-    }
     & dt {
         font-size:${theme.FONT_SIZE.h7};
     }
     & dd {
         margin-top:5px;
-        font-size:${theme.FONT_SIZE.h4};
+        font-size:30px;
     }
 `
 
@@ -164,8 +150,8 @@ S.ColorBox = styled.div`
     border-radius:10px;
     display:flex;
     align-items: center;
-    width:80px;
-    height:80px;
+    width:48px;
+    height:48px;
 `
 
 S.ColorBarInfoList = styled.div`
@@ -175,6 +161,15 @@ S.ColorBarInfoTitle = styled.h4`
     font-size:${theme.FONT_SIZE.h7};
     font-weight:600;
     color:${theme.PALETTE.gray["600"]};
+`
+S.ButtonBox = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    align-items: center;
+    & + div {
+        margin-top:10px;
+    }
 `
 
 export default S;

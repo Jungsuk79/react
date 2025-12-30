@@ -2,7 +2,6 @@ import React from 'react';
 import S from "./style";
 import {pointColor,colorBar} from "./mocks/guide.mock";
 import GiudeColorBar from "./GiudeColorBar";
-import GuideColorTextBox from "./GuideColorTextBox";
 
 const GuideColor = () => {
     const renderColorBars = (type) =>
@@ -19,7 +18,24 @@ const GuideColor = () => {
             <S.GuideFlexBox>
                 {pointColor.map((data, i) => (
                     <S.GuideColorBox key={`point-${i}`}>
-                        <GuideColorTextBox data={data} />
+                        <S.ColorTextBox>
+                            <p style={{color:data.color}}>{data.title}</p>
+                            <S.ColorTextInfo>
+                                <dl>
+                                    <dt>Name</dt>
+                                    <dd>{data.name}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Hex</dt>
+                                    <dd>{data.color}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Rgb</dt>
+                                    <dd>{data.rgbColor}</dd>
+                                </dl>
+                            </S.ColorTextInfo>
+                        </S.ColorTextBox>
+                        <S.ColorBox style={{backgroundColor:data.color}}></S.ColorBox>
                     </S.GuideColorBox>
                 ))}
             </S.GuideFlexBox>

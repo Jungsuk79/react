@@ -8,7 +8,7 @@ const GuideContainer = () => {
         <S.GuideWrapper>
             <S.GuideTitle>스타일 가이드 페이지</S.GuideTitle>
             <GuideText />
-            {/*<GuideColor />*/}
+            <GuideColor />
         </S.GuideWrapper>
     );
 };

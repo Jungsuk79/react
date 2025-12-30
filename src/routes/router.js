@@ -2,6 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import Home from "../pages/home/Home.jsx";
 import Intro from "../pages/intro/Intro.jsx";
 import GuideContainer from "../pages/guide/GuideContainer.jsx";
+import GuideUiContainer from "../pages/guide/GuideUiContainer.jsx";
 import PostContainer from "../pages/posts/PostContainer.jsx";
 import Post from "../pages/posts/Post.jsx";
 import Layout from "../pages/layout/Layout.jsx";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
     {
         path: "/guide",
         element: <GuideContainer />
+    },
+    {
+        path: "/guide-ui",
+        element: <GuideUiContainer />
     },
     {
         path: "*",

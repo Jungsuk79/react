@@ -4,27 +4,35 @@ const theme = {};
 
 theme.PALETTE = {
     primary: {
-        main: '#ffd159',
-        sub: '#fff4d8',
+        main: '#03a63c',
+        light: '#e6f6e8',
+        dark: '#00630e'
     },
     secondary: {
-        main: '#ffd159',
+        main: '#f27830',
         sub: '#fff4d8',
+        light: '#fce3d4',
+        dark: '#eb6413'
     },
     white:'#ffffff',
     black:'#000000',
     gray: {
         100:'#111',
+        200:'#222',
         300:'#333',
         600:'#666',
         900:'#999',
+        101:'#f5f5f5',
+        201:'#d9d9d9',
+        301:'#cccccc',
+        302:'#c0c0c0',
     },
     error:'#eb6144',
     background: {
         white: '#eee',
         gray:'#f1ebf5',
         black:'#333',
-    },
+    }
 }
 
 theme.FONT_WEIGHT = {
@@ -50,13 +58,15 @@ theme.FONT_SIZE = {
 }
 
 theme.FONT_LINE = {
-    h1:'75px',
-    h2:'55px',
-    h3:'41px',
-    h4:'29px',
-    h5:'25px',
-    h6:'22px',
-    h7:'17px'
+    h1:'68px',
+    h2:'52px',
+    h3:'42px',
+    h4:'36px',
+    h5:'30px',
+    h6:'24px',
+    h7:'22px',
+    h8:'18px',
+    h9:'16px'
 }
 
 export default theme;
