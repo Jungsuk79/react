@@ -4,7 +4,7 @@ import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
     /* 스타일 reset */
-    ${reset}; 
+    ${reset};
     
     * {
         box-sizing: border-box;
@@ -15,11 +15,12 @@ const GlobalStyle = createGlobalStyle`
     
     body {
         line-height: 1.25;
-        font-family: 'Pretendard';
+        font-family: 'Pretendard',sans-serif;
     }
     button {
         cursor: pointer;
     }
+    input {margin:0;}
 
     /* 폰트 적용 */
     @font-face {

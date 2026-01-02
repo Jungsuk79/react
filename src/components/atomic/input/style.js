@@ -10,6 +10,25 @@ const getStatusColor = (props) => {
 };
 
 S.BasicInputWrap = styled.div`
+    display:inline-block;
+    vertical-align: top;
+    & .under-txt {
+        font-size:12px;
+        color:#999;
+        margin-top:5px;
+        &.success {
+            color: ${({theme})=>theme.PALETTE.primary["main"]};
+        }
+        &.error {
+             color: ${({theme})=>theme.PALETTE.error};
+        }
+    }
+    & + div {
+        margin-left:10px;
+    }
+`
+
+S.BasicInputArea = styled.div`
     display:inline-flex;
     vertical-align: middle;
     align-items: center;
@@ -24,7 +43,7 @@ S.BasicInputWrap = styled.div`
         padding: ${({ $padding }) => $padding || '8px 12px'};
         font-size: ${({ $fontSize }) => ($fontSize !== undefined ? `${$fontSize}px` : `14px`)};
         border-radius: ${({ $radius }) => ($radius !== undefined ? `${$radius}px` : 0)};
-        
+
         &:focus {
             border-color: ${(props) => getStatusColor(props)};
         }
@@ -36,29 +55,6 @@ S.BasicInputWrap = styled.div`
             font-size: ${({ $fontSize }) => ($fontSize !== undefined ? `${$fontSize}px` : `14px`)};
         }
     }
-    
-    & + div {
-        margin-left:10px;
-    }
-    
-    &.under-txt-type {
-        padding-bottom:20px;
-        position:relative;
-    }
-    & .under-txt {
-        position:absolute;
-        left:0;
-        bottom:0;
-        font-size:12px;
-        color:#999;
-        &.success {
-            color: ${({theme})=>theme.PALETTE.primary["main"]};
-        }
-        &.error {
-             color: ${({theme})=>theme.PALETTE.error};
-        }
-    }
-    
 `
 
 export default S;

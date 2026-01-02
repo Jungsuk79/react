@@ -11,3 +11,12 @@ export const fadeIn = keyframes`
         transform: translateY(0);
     }
 `;
+
+export const switchOn = keyframes`
+    0% {
+        transform: translateX(0);
+    }   
+    100% {
+        transform: translateX(100%);
+    }
+`;
