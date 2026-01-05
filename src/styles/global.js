@@ -19,6 +19,8 @@ const GlobalStyle = createGlobalStyle`
     }
     button {
         cursor: pointer;
+        margin:0;
+        padding:0;
     }
     input {margin:0;}
 

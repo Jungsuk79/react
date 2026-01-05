@@ -8,6 +8,9 @@ import BasicRadio from "../../components/atomic/radio/BasicRadio";
 import BasicTextarea from "../../components/atomic/textarea/BasicTextarea";
 import DropDown from "../../components/atomic/dropdown/DropDown";
 import Switch from "../../components/atomic/switch/Switch";
+import Pagination from "../../components/atomic/panation/Pagination";
+import Tag from "../../components/atomic/tag/Tag";
+import BottomSheet from "../../components/moleculs/bottomsheet/BottomSheet";
 
 const GuideUiContainer = () => {
 
@@ -25,7 +28,18 @@ const GuideUiContainer = () => {
         { label: "옵션 3", value: "opt3" },
     ];
     const handleDropdownSelect = (item) => {
+        console.log("선택된 아이템 정보:", item);
+    };
 
+    // panation
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalItems = 100; // 실제 데이터 개수
+    const itemPerPage = 10; // 한 페이지에 보여줄 개수
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+        console.log("현재 페이지는:", page);
+        // 여기서 API를 호출하거나 데이터를 필터링합니다.
     };
 
     return (
@@ -154,8 +168,32 @@ const GuideUiContainer = () => {
             <S.GuideBox>
                 <DropDown options={dropdownOptions} onSelect={handleDropdownSelect} placeholder="선택해주세요." />
                 <DropDown options={dropdownOptions2} onSelect={handleDropdownSelect} placeholder="선택해주세요." />
-                <DropDown options={dropdownOptions2} onSelect={handleDropdownSelect} disabled={true} placeholder="Disabled" />
+                <DropDown options={dropdownOptions2} onSelect={handleDropdownSelect} disabled={true} />
             </S.GuideBox>
+
+            <S.GuideSubTitle>Pagination</S.GuideSubTitle>
+            <S.GuideBox>
+                <Pagination
+                    totalItems={totalItems}
+                    itemPerPage={itemPerPage}
+                    currentPage={currentPage}
+                    onPageChange={handlePageChange}
+                />
+            </S.GuideBox>
+
+            <S.GuideSubTitle>Tag(size:small,medium,large,type:gray,line,primary,secondary,error)</S.GuideSubTitle>
+            <S.GuideBox>
+                <S.TagGuide>
+                    <Tag size={"small"}>small</Tag>
+                    <Tag>기본</Tag>
+                    <Tag type={"line"}>라인타입</Tag>
+                    <Tag type={"primary"}>primary</Tag>
+                    <Tag type={"secondary"}>secondary</Tag>
+                    <Tag type={"error"}>error</Tag>
+                    <Tag size={"large"}>large</Tag>
+                </S.TagGuide>
+            </S.GuideBox>
+
         </S.GuideWrapper>
     );
 };

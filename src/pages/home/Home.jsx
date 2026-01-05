@@ -20,6 +20,9 @@ const Home = () => {
             <div>
                 <Link to="/guide-ui">ui 가이드 페이지</Link>
             </div>
+            <div>
+                <Link to="/guide-sample">가이드 샘플페이지</Link>
+            </div>
         </div>
         
     );

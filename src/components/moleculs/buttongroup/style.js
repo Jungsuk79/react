@@ -8,6 +8,9 @@ S.BtnGoup = styled.div`
     width: 100%;
     justify-content: ${({ align }) => align || 'center'};
     flex-direction: ${({ direction }) => direction || 'row'};
+    margin-top: ${(props) => (props.marginTop ? `${props.marginTop}px` : '0')};
+    
+    
 
     & > button, & > a {
         flex: ${({ $fullWidth }) => ($fullWidth ? 1 : 'initial')};

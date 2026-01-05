@@ -20,6 +20,7 @@ S.GuideSubTitle = styled.h4`
     padding-bottom:5px;
     border-bottom:1px solid ${theme.PALETTE.gray["300"]};
     margin-top:20px;
+    word-break: break-all;
 `
 
 S.GuideFlexBox = styled.div`
@@ -170,6 +171,13 @@ S.ButtonBox = styled.div`
     & + div {
         margin-top:10px;
     }
+`
+
+S.TagGuide = styled.div`
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    gap:10px;
 `
 
 export default S;

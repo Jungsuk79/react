@@ -10,6 +10,7 @@ import Join from "../pages/join/Join.jsx";
 import Login from "../pages/login/Login.jsx";
 import MyPage from "../pages/mypage/MyPage.jsx";
 import NotFound from "../pages/error/NotFound.jsx";
+import GuideSamples from "../pages/guide/GuideSamples";
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
     {
         path: "/guide-ui",
         element: <GuideUiContainer />
+    },
+    {
+        path: "/guide-sample",
+        element: <GuideSamples />
     },
     {
         path: "*",
