@@ -66,9 +66,7 @@ const GuideUiContainer = () => {
                     <Button size={"large"} shape={"large"} font={"h6"}>LARGE</Button>
                     <Button size={"large"} shape={"big"} font={"h6"}>LARGE</Button>
                 </S.ButtonBox>
-                <S.ButtonBox>
-                    <Button size={"full"} shape={""} font={"h2"}>Full</Button>
-                </S.ButtonBox>
+                <Button size={"full"} shape={""} font={"h2"}>Full</Button>
             </S.GuideBox>
             <S.GuideBoxTitle>Button Type(variant,disabled)</S.GuideBoxTitle>
             <S.GuideBox>
@@ -125,53 +123,48 @@ const GuideUiContainer = () => {
                 <BasicInput placeholder={"입력해 주세요."} radius={"10"} />
                 <BasicInput type={"password"} placeholder={"비밀번호를 입력해 주세요."} />
                 <BasicInput disabled={"disabled"} placeholder={"Disabled"} />
-            </S.GuideBox>
-            <S.GuideBox>
                 <BasicInput placeholder={"입력해 주세요."} success={true} />
                 <BasicInput placeholder={"입력해 주세요."} error={true} />
                 <BasicInput placeholder={"입력해 주세요."} descpition={"아이디는 영문으로 작성해 주세요."} />
                 <BasicInput placeholder={"입력해 주세요."} success={true} successTxt={"성공문구 입니다."} />
                 <BasicInput placeholder={"입력해 주세요."} error={true} errorTxt={"에러문구 입니다."} />
-            </S.GuideBox>
-            <S.GuideBox>
                 <BasicInput placeholder={"입력해 주세요."} id={"id01"} labelTxt={"레이블"} />
                 <BasicInput placeholder={"입력해 주세요."} id={"id02"} direction={"reverse"} labelTxt={"레이블"} />
-            </S.GuideBox>
-            <S.GuideBox>
                 <BasicInput placeholder={"입력해 주세요."} fontSize={"20"} padding={"10px 20px"} />
             </S.GuideBox>
-            <S.GuideSubTitle>Checkbox(id, labelTxt, defaultChecked, disabled)</S.GuideSubTitle>
+            <S.GuideBoxTitle>Checkbox(id, labelTxt, defaultChecked, disabled)</S.GuideBoxTitle>
             <S.GuideBox>
                 <BasicCheckBox id={"check01"} />
                 <BasicCheckBox id={"check02"} labelTxt={"Normal"} />
                 <BasicCheckBox id={"check03"} labelTxt={"Checked"} defaultChecked={"defaultChecked"} />
                 <BasicCheckBox id={"check04"} labelTxt={"Disabled"} disabled={true} />
             </S.GuideBox>
-            <S.GuideSubTitle>Radio(id,name,disabled,labelTxt,defaultChecked)</S.GuideSubTitle>
+            <S.GuideBoxTitle>Radio(id,name,disabled,labelTxt,defaultChecked)</S.GuideBoxTitle>
             <S.GuideBox>
                 <BasicRadio id={"radio01"} name={"group"} />
                 <BasicRadio id={"radio02"} name={"group"} labelTxt={"Normal"} />
                 <BasicRadio id={"radio03"} name={"group"} labelTxt={"Checked"} defaultChecked={"defaultChecked"} />
                 <BasicRadio id={"radio04"} name={"group"} labelTxt={"Disabled"} disabled={true} />
             </S.GuideBox>
-            <S.GuideSubTitle>Switch</S.GuideSubTitle>
+            <S.GuideBoxTitle>Switch</S.GuideBoxTitle>
             <S.GuideBox>
                 <Switch label={"Off"} />
                 <Switch label={"On"} defaultChecked={true} />
                 <Switch label={"Disabled"} disabled={true} />
             </S.GuideBox>
-            <S.GuideSubTitle>Textarea(CountWrap,placeholder,rows,id,labelTxt)</S.GuideSubTitle>
+            <S.GuideBoxTitle>Textarea(CountWrap,placeholder,rows,id,labelTxt)</S.GuideBoxTitle>
             <S.GuideBox>
                 <BasicTextarea CountWrap={true} placeholder={"입력해 주세요."} rows={5} id={"txtarea01"} labelTxt={"레이블"} value={textareaValue} onChange={(val) => setTextareaValue(val)} />
             </S.GuideBox>
-            <S.GuideSubTitle>Dropdown()</S.GuideSubTitle>
+            <S.GuideBoxTitle>Dropdown(options,disabled)</S.GuideBoxTitle>
             <S.GuideBox>
                 <DropDown options={dropdownOptions} onSelect={handleDropdownSelect} placeholder="선택해주세요." />
                 <DropDown options={dropdownOptions2} onSelect={handleDropdownSelect} placeholder="선택해주세요." />
                 <DropDown options={dropdownOptions2} onSelect={handleDropdownSelect} disabled={true} />
             </S.GuideBox>
 
-            <S.GuideSubTitle>Pagination</S.GuideSubTitle>
+            <S.GuideSubTitle>Etc.</S.GuideSubTitle>
+            <S.GuideBoxTitle>Paging</S.GuideBoxTitle>
             <S.GuideBox>
                 <Pagination
                     totalItems={totalItems}
@@ -181,7 +174,7 @@ const GuideUiContainer = () => {
                 />
             </S.GuideBox>
 
-            <S.GuideSubTitle>Tag(size:small,medium,large,type:gray,line,primary,secondary,error)</S.GuideSubTitle>
+            <S.GuideBoxTitle>Tag(size:small,medium,large,type:gray,line,primary,secondary,error)</S.GuideBoxTitle>
             <S.GuideBox>
                 <S.TagGuide>
                     <Tag size={"small"}>small</Tag>

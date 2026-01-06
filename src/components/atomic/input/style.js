@@ -23,9 +23,6 @@ S.BasicInputWrap = styled.div`
              color: ${({theme})=>theme.PALETTE.error};
         }
     }
-    & + div {
-        margin-left:10px;
-    }
 `
 
 S.BasicInputArea = styled.div`

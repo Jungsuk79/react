@@ -30,7 +30,10 @@ S.GuideFlexBox = styled.div`
     margin-top:20px;
 `
 S.GuideBox = styled.div`
-    margin-top:10px;
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    
 `
 
 S.GuideBoxTitle = styled.h4`
@@ -168,9 +171,7 @@ S.ButtonBox = styled.div`
     flex-wrap: wrap;
     gap:10px;
     align-items: center;
-    & + div {
-        margin-top:10px;
-    }
+    margin-bottom:10px;
 `
 
 S.TagGuide = styled.div`
